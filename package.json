@@ -16,7 +16,7 @@
     "vulcanize": "",
     "express": "",
     "polymer": "git://github.com/Custom-Elements/polymer",
-    "lodash": "",
+    "lodash": "^2.4.1",
     "ws": "^0.4.31"
   },
   "license": "MIT",

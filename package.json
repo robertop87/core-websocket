@@ -15,7 +15,8 @@
     "gulp-concat": "",
     "vulcanize": "",
     "express": "",
-    "lodash": "^2.4.1",
+    "polymer": "git://github.com/Custom-Elements/polymer",
+    "lodash": "",
     "ws": "^0.4.31"
   },
   "license": "MIT",

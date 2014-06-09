@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "dependencies": {
     "coffeeify": "",
-    "coffee-script": "",
+    "coffee-script": "1.7.1",
     "browserify": "",
     "browserify-data": "",
     "gulp": "",

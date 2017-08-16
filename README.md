@@ -1,4 +1,4 @@
-#core-websocket
+# core-websocket
 
 A polymer websocket adapter that provides a declarative way to drop 
 reconnecting websockets onto a page.  If multiple URLs are provided, 
@@ -8,19 +8,19 @@ them in the event that a connection is lost.
 
 
 
-##Events
-####data
+## Events
+#### data
 Emits data as it's retreived, with the detail containing the data received and 
 the source (assuming one was provided in the data request)
 
-####serverChange
+#### serverChange
 If servers are changed for any reason this event is fired
 
 
-##Attributes
-####json
+## Attributes
+#### json
 Specifies whether the adapter will automatically attempt to json serialize/deserialize messages.  Defaults to `true`.
-####urls
+#### urls
 As urls change, the socket reinitializes with the new target servers.  *In process messages could be lost 
 during the switch to a new set of servers.*
 
@@ -37,8 +37,8 @@ during the switch to a new set of servers.*
 
 
 
-##Methods
-####send
+## Methods
+#### send
 Sends the provided message via the websocket.  Optional callback parameter can be provided
 will be called with the response, or you can listen for the `data` event.  The send call 
 returns a queryId or messageId that will be included in the response assuming the responding server includes it.
@@ -49,7 +49,7 @@ returns a queryId or messageId that will be included in the response assuming th
 
 
 
-####handleData
+#### handleData
 As request data is returned, we bubble a data event but also if possible associate it
 with the proper callback and fire that as well.
 
@@ -59,7 +59,7 @@ with the proper callback and fire that as well.
 
 
 
-##Event Handlers
+## Event Handlers
 
 
 
@@ -83,8 +83,8 @@ If you explicitly call `close()`, then this socket will really close, otherwise
 it will work to automatically reconnect `onerror` and `onclose` from the
 underlying WebSocket.
 
-#Events
-##onserver(event)
+# Events
+## onserver(event)
 This is fired when the active server changes, this will be after a `send` as
 that is the only time the socket has activity to 'know' it switched servers.
 
@@ -160,14 +160,14 @@ ReconnectingWebSocket = require(reconnecting-websocket)
 ws = new ReconnectingWebSocket('ws://...');
 ```
 
-#Events
-##onreconnect(event)
+# Events
+## onreconnect(event)
 This callback is fired when the socket reconnects. This is separated from the
 `onconnect(event)` callback so that you can have different behavior on the
 first time connection from subsequent connections.
-##onsend(event)
+## onsend(event)
 Fired after a message has gone out the socket.
-##ws
+## ws
 A reference to the contained WebSocket in case you need to poke under the hood.
 
 This may work on the client or the server. Because we love you.
